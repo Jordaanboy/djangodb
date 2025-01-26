@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{% block title%} Join Today! {% endblock %}
+{% block header%} Join Today! {% endblock%}
+
+{% block content%}
+<br>
+ <form method="POST">
+  {% csrf_token %}
+  <div class="mb-3">
+    <input type="text" class="form-control" id="exampleInputFname" name="fname" placeholder="First Name">
+  </div>
+
+ <div class="mb-3">
+    <input type="text" class="form-control" id="exampleInputLname" name="lname" placeholder="Last Name">
+  </div>
+
+  <div class="mb-3">
+    <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" name="email" placeholder="Email Address">
+  </div>
+
+   <div class="mb-3">
+    <input type="text" class="form-control" id="exampleInputAge" name="age" placeholder="Age">
+  </div>
+
+  <div class="mb-3">
+    <input type="password" class="form-control" id="exampleInputPassword1" name="passwd" placeholder="Password">
+    <br>
+  </div>
+  <button type="submit" class="btn btn-secondary">Sign Up</button>
+</form>
+{% endblock %}
